@@ -36,6 +36,26 @@ public class Person
         this.name = "";
     }
 
+    public int getProductPrice(){
+        int price = product.returnPrice();
+        return price;
+    }
+
+    public int getProductStock(){
+        int stock = product.returnStock();
+        return stock;
+    }
+
+    public String getProductName(){
+        String name = product.returnName();
+        return name;
+    }
+
+    public int getProductType(){
+        int type = product.returnType();
+        return type;
+    }
+
     public void name(String name){
         this.name = name; 
     }
@@ -78,11 +98,12 @@ public class Person
         if (productArr[0].length() > 0){
             System.out.println("Name: " + productArr[0] +
             " Price: " + productArr[1] + " Stock: " +
-            productArr[2]);
+            productArr[2] + " Type: " + productArr[3]);
         }
         else {
             System.out.println("Price: " + productArr[1] 
-            + " Stock: " + productArr[2]);
+            + " Stock: " + productArr[2] + " Type: " 
+            + productArr[3]);
         }
     }
 

@@ -4,6 +4,7 @@ public class Product{
    private String productName="";
    private int price;
    private int stock;
+   private int type = 0;
     
    Product(){
        this.productName = "";
@@ -11,12 +12,18 @@ public class Product{
        double stock = Math.random() * 1000;
        this.price = (int)price;
        this.stock = (int)stock;
+       if (Math.random() < 0.5){
+           type = 0;
+       }
+       else{
+           type = 1;
+       }
    }
 
    Product(String name, int price, int stock){
        this.productName = name;
        this.price = price; 
-       this. stock = stock;
+       this.stock = stock;
    }
 
    Product(int price, int stock){
@@ -35,6 +42,10 @@ public class Product{
 
    public String returnName(){
        return this.productName;
+   }
+
+   public int returnType(){
+       return this.type;
    }
 
    public void changePrice(int newPrice){
@@ -58,10 +69,11 @@ public class Product{
    }
    
    public String[] productStatus(){
-       String[] temp = new String[3];
+       String[] temp = new String[4];
        temp[0] = this.productName;
        temp[1] = Integer.toString(this.price);
        temp[2] = Integer.toString(this.stock);
+       temp[3] = Integer.toString(this.type);
        return temp;
    }
 

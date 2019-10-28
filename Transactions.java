@@ -13,7 +13,16 @@ public class Transactions
             person1.payMoney(money);
             person2.receiveMoney(money);
         }
-        //else {
-        //}
     }
+
+
+    /**
+     * buyProduct method, used to finish the transaction
+     * between buyers and sellers. 
+     * Objects much match(?)
+     * Could make an has object and wants object(?)
+     * @param person1: buyer
+     * @param person2: seller, 
+     */
+    public static void buyProduct(Person person1, Person2)
 }
